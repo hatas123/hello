@@ -1,0 +1,43 @@
+{
+    "log": {
+        "loglevel": "warning"
+    },
+    "inbounds": [
+        {
+            "port": 1080,
+            "listen": "0.0.0.0",
+            "protocol": "socks",
+            "settings": {
+                "udp": true
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "104.243.28.170",
+                        "port": 443,
+                        "users": [
+                            {
+                                "id": "c41f2256-4607-4e3e-abb5-9bf44b96116b",
+                                "flow": "xtls-rprx-vision",
+                                "encryption": "none",
+                                "level": 0
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": "xtls",
+                "tlsSettings": {
+                    "serverName": "104.243.28.170"
+                }
+            }
+        }
+    ]
+}
