@@ -9,6 +9,9 @@ namespace xxx{
         complex(double r ,double i)
         : re(r),im(i)
         {}
+        complex()
+        :re(0),im(0)
+        {}
         double real() const {return re;}
         double image() const {return im;}
         complex& operator += (const complex&);
