@@ -25,10 +25,10 @@ model1 = tf.keras.models.Sequential([tf.keras.layers.Flatten(input_shape=(28, 28
                                      tf.keras.layers.Dense(512,activation=tf.nn.relu),
                                      tf.keras.layers.Dropout(0.2),
                                      tf.keras.layers.Dense(10,activation=tf.nn.softmax)])
-model1.build(input_shape=(28, 28))
+# model1.build(input_shape=(28, 28))
 
-predictions = model1(train_x[:1]).numpy()
-print(predictions)
+# predictions = model1(train_x[:1]).numpy()
+# print(predictions)
 
 print(model1.summary())
 
